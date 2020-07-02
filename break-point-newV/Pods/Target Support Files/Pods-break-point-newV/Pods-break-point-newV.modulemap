@@ -1,0 +1,6 @@
+framework module Pods_break_point_newV {
+  umbrella header "Pods-break-point-newV-umbrella.h"
+
+  export *
+  module * { export * }
+}

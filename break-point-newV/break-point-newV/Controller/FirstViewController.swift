@@ -15,6 +15,9 @@ class FirstViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func logoutPressed(_ sender: Any) {
+        AuthService.instance.logoutUser()
+    }
+    
 }
 
