@@ -31,11 +31,20 @@ class DataService {
         return _REF_GROUPS
     }
     
-    var REF_FEEDS: DatabaseReference {
+    var REF_FEED: DatabaseReference {
         return _REF_FEED
     }
     
     func createDBUser(uid: String, userData: Dictionary<String, Any>) {
-        self.REF_USERS.child(uid).updateChildValues(userData)
+        REF_USERS.child(uid).updateChildValues(userData)
+    }
+    
+    func uploadPost(withMessage message: String, forUid uid: String, withGroupKey groupKey: String?, sendComplete: @escaping(_ success: Bool) -> ()) {
+        if groupKey != nil {
+            
+        } else {
+            REF_FEED.childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            sendComplete(true)
+        }
     }
 }

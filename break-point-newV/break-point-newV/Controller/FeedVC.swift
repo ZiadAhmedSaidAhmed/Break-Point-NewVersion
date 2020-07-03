@@ -8,16 +8,14 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FeedVC: UIViewController {
+
+    @IBOutlet weak var profileImage: UITableViewCell!
+    @IBOutlet weak var emailLbl: UILabel!
+    @IBOutlet weak var contentLbl: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func logoutPressed(_ sender: Any) {
-        AuthService.instance.logoutUser()
-    }
-    
 }
-

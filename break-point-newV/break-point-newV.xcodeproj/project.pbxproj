@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0467217824AF6254007C40CC /* meVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467217724AF6254007C40CC /* meVC.swift */; };
+		0467217A24AF82EB007C40CC /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467217924AF82EB007C40CC /* CreatePostVC.swift */; };
+		0467217C24AFA4D4007C40CC /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467217B24AFA4D4007C40CC /* UIViewExt.swift */; };
+		0467217E24AFDA28007C40CC /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467217D24AFDA28007C40CC /* FeedCell.swift */; };
 		0467F82F24ADF74500ADE9AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F82E24ADF74500ADE9AE /* AppDelegate.swift */; };
 		0467F83124ADF74500ADE9AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F83024ADF74500ADE9AE /* SceneDelegate.swift */; };
-		0467F83324ADF74500ADE9AE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F83224ADF74500ADE9AE /* FirstViewController.swift */; };
-		0467F83524ADF74500ADE9AE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F83424ADF74500ADE9AE /* SecondViewController.swift */; };
+		0467F83324ADF74500ADE9AE /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F83224ADF74500ADE9AE /* FeedVC.swift */; };
+		0467F83524ADF74500ADE9AE /* GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F83424ADF74500ADE9AE /* GroupsVC.swift */; };
 		0467F83824ADF74500ADE9AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467F83624ADF74500ADE9AE /* Main.storyboard */; };
 		0467F83A24ADF74600ADE9AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0467F83924ADF74600ADE9AE /* Assets.xcassets */; };
 		0467F83D24ADF74600ADE9AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0467F83B24ADF74600ADE9AE /* LaunchScreen.storyboard */; };
@@ -25,11 +29,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0467217724AF6254007C40CC /* meVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meVC.swift; sourceTree = "<group>"; };
+		0467217924AF82EB007C40CC /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
+		0467217B24AFA4D4007C40CC /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		0467217D24AFDA28007C40CC /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		0467F82B24ADF74500ADE9AE /* break-point-newV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "break-point-newV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0467F82E24ADF74500ADE9AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0467F83024ADF74500ADE9AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0467F83224ADF74500ADE9AE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		0467F83424ADF74500ADE9AE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		0467F83224ADF74500ADE9AE /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		0467F83424ADF74500ADE9AE /* GroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsVC.swift; sourceTree = "<group>"; };
 		0467F83724ADF74500ADE9AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0467F83924ADF74600ADE9AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0467F83C24ADF74600ADE9AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,10 +106,12 @@
 		0467F84424ADF75800ADE9AE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0467F83224ADF74500ADE9AE /* FirstViewController.swift */,
-				0467F83424ADF74500ADE9AE /* SecondViewController.swift */,
+				0467F83224ADF74500ADE9AE /* FeedVC.swift */,
+				0467F83424ADF74500ADE9AE /* GroupsVC.swift */,
 				0467F84F24AE378D00ADE9AE /* AuthVC.swift */,
 				0467F85124AE37A100ADE9AE /* LoginVC.swift */,
+				0467217724AF6254007C40CC /* meVC.swift */,
+				0467217924AF82EB007C40CC /* CreatePostVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -111,6 +121,7 @@
 			children = (
 				0467F84D24AE375D00ADE9AE /* customTextField.swift */,
 				0467F85324AE3E0D00ADE9AE /* ShadowView.swift */,
+				0467217D24AFDA28007C40CC /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +136,7 @@
 		0467F84724ADF77600ADE9AE /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				0467217B24AFA4D4007C40CC /* UIViewExt.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -276,13 +288,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0467217C24AFA4D4007C40CC /* UIViewExt.swift in Sources */,
 				0467F85424AE3E0D00ADE9AE /* ShadowView.swift in Sources */,
-				0467F83524ADF74500ADE9AE /* SecondViewController.swift in Sources */,
-				0467F83324ADF74500ADE9AE /* FirstViewController.swift in Sources */,
+				0467F83524ADF74500ADE9AE /* GroupsVC.swift in Sources */,
+				0467F83324ADF74500ADE9AE /* FeedVC.swift in Sources */,
 				0467F85224AE37A100ADE9AE /* LoginVC.swift in Sources */,
 				0467F84E24AE375D00ADE9AE /* customTextField.swift in Sources */,
 				0467F82F24ADF74500ADE9AE /* AppDelegate.swift in Sources */,
+				0467217E24AFDA28007C40CC /* FeedCell.swift in Sources */,
+				0467217824AF6254007C40CC /* meVC.swift in Sources */,
 				0467F85024AE378D00ADE9AE /* AuthVC.swift in Sources */,
+				0467217A24AF82EB007C40CC /* CreatePostVC.swift in Sources */,
 				0467F85624AE51E900ADE9AE /* AuthService.swift in Sources */,
 				0467F83124ADF74500ADE9AE /* SceneDelegate.swift in Sources */,
 				0467F84C24AE1F0A00ADE9AE /* DataService.swift in Sources */,
