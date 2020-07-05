@@ -52,8 +52,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hN9-bM-U10">
                                 <rect key="frame" x="0.0" y="70" width="375" height="548"/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="fax-lP-HoF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="100" id="fax-lP-HoF" customClass="FeedCell" customModule="break_point_newV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fax-lP-HoF" id="mno-i9-olh">
@@ -98,6 +99,11 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="za3-RU-Dui" secondAttribute="bottom" constant="10" id="VU4-rb-LNn"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLbl" destination="ekr-e8-kJ5" id="Cnb-ZZ-TsY"/>
+                                            <outlet property="userEmaillLbl" destination="JtB-kT-op9" id="m7q-Qs-PGp"/>
+                                            <outlet property="userProfileImage" destination="WMW-qO-Sgf" id="y5t-wz-bL6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -116,9 +122,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="feed-tabIcon" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="contentLbl" destination="ekr-e8-kJ5" id="qTt-a3-ctI"/>
-                        <outlet property="emailLbl" destination="JtB-kT-op9" id="70s-3s-0FU"/>
-                        <outlet property="profileImage" destination="fax-lP-HoF" id="90s-0m-96V"/>
+                        <outlet property="tableView" destination="hN9-bM-U10" id="pY5-3d-0Lk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -128,9 +132,9 @@
         <!--Create PostVC-->
         <scene sceneID="08E-bj-7DL">
             <objects>
-                <viewController id="Rlf-Kg-5aL" customClass="CreatePostVC" customModule="break_point_newV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Rlf-Kg-5aL" customClass="CreatePostVC" customModule="break_point_newV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wAf-n8-AoV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ia-zo-SLE">
@@ -182,14 +186,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Say somthing here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Rc-2g-OTz">
-                                <rect key="frame" x="16" y="170" width="343" height="407"/>
+                                <rect key="frame" x="16" y="170" width="343" height="427"/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mc9-bT-pwZ">
-                                <rect key="frame" x="0.0" y="597" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.16862745100000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="kRP-kk-q2C"/>
@@ -277,6 +281,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kg6-a3-9nU">
                                 <rect key="frame" x="0.0" y="70" width="375" height="548"/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Pz9-41-wfF">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
@@ -381,6 +386,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sct-qL-99w">
                                 <rect key="frame" x="0.0" y="345" width="375" height="273"/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="L98-dB-KyG">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
@@ -410,9 +416,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="me" image="me-tabIcon" selectedImage="me-tabIcon" id="dhR-pd-WdQ"/>
                     <connections>
-                        <outlet property="emailLbl" destination="xXF-I5-KGP" id="KTg-A6-jKl"/>
-                        <outlet property="profileImage" destination="P6g-ef-yay" id="mL1-X6-hli"/>
-                        <outlet property="tableView" destination="sct-qL-99w" id="Oa0-79-a8J"/>
+                        <outlet property="tableView" destination="sct-qL-99w" id="fOF-Ta-sKX"/>
+                        <outlet property="userEmailLbl" destination="xXF-I5-KGP" id="uot-kD-UJY"/>
+                        <outlet property="userProfileImage" destination="P6g-ef-yay" id="vCx-bh-1F9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0OQ-1v-loE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

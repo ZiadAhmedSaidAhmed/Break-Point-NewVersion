@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class meVC: UIViewController {
-
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var emailLbl: UILabel!
+    
+    @IBOutlet weak var userProfileImage: UIImageView!
+    @IBOutlet weak var userEmailLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -21,7 +22,20 @@ class meVC: UIViewController {
     }
     
     @IBAction func signoutBtnPressed(_ sender: Any) {
-        AuthService.instance.logoutUser()
+        
+        let logOutPopOut = UIAlertController(title: "Logout", message: "Are you sure?", preferredStyle: .actionSheet)
+        let logOutAction = UIAlertAction(title: "Logout", style: .destructive) { (logoutBtnTapped) in
+            
+            do {
+                try Auth.auth().signOut()
+                let authVC = self.storyboard?.instantiateViewController(identifier: "AuthVC") as? AuthVC
+                self.present(authVC!, animated: true, completion: nil)
+            } catch {
+                print(error)
+            }
+        }
+        logOutPopOut.addAction(logOutAction)
+        present(logOutPopOut, animated: true, completion: nil)
     }
     
 }
