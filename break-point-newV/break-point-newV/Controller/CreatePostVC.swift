@@ -20,6 +20,7 @@ class CreatePostVC: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         textView.delegate = self
         sendBtn.blindToKeyboard()
+        emailLbl.text = Auth.auth().currentUser?.email
     }
     
     @IBAction func sendBtnPressed(_ sender: Any) {

@@ -17,8 +17,12 @@ class meVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        userEmailLbl.text = Auth.auth().currentUser?.email
     }
     
     @IBAction func signoutBtnPressed(_ sender: Any) {
