@@ -22,6 +22,7 @@ class CreateGroupsVC: UIViewController {
     @IBOutlet weak var doneBtn: UIButton!
     
     var emailArray = [String]()
+    var selectedEmailsArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +65,23 @@ extension CreateGroupsVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserCell else { return UITableViewCell() }
         
         let image = UIImage(named: "defaultProfileImage")
-        cell.setViews(profileImage: image!, email: emailArray[indexPath.row], isSelected: true)
+        cell.setViews(profileImage: image!, email: emailArray[indexPath.row], isSelected: false)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? UserCell else { return }
+        if !selectedEmailsArray.contains(cell.emailLbl.text!) {
+            selectedEmailsArray.append(cell.emailLbl.text!)
+            groupMemberLbl.text = selectedEmailsArray.joined(separator: ", ")
+        } else {
+            selectedEmailsArray = selectedEmailsArray.filter({ $0 != cell.emailLbl.text! })
+            if selectedEmailsArray.count >= 1 {
+                groupMemberLbl.text = selectedEmailsArray.joined(separator: ", ")
+            } else {
+                groupMemberLbl.text = "add people to your group"
+            }
+        }
     }
 }
 
