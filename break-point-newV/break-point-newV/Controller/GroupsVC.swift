@@ -10,9 +10,46 @@ import UIKit
 
 class GroupsVC: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    var groupsArray = [Group]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DataService.instance.REF_GROUPS.observe(.value) { (DataSnapshot) in
+            DataService.instance.getGroupsForCurrentUser(handler: { (returnedArray) in
+                self.groupsArray = returnedArray.reversed()
+                self.tableView.reloadData()
+            })
+        }
     }
 }
 
+extension GroupsVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        groupsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath) as? GroupCell else { return UITableViewCell() }
+        
+        cell.setViews(groupTitleLbl: groupsArray[indexPath.row].groupTitle, groupDescreptionLbl: groupsArray[indexPath.row].groupDes, numberOfGroupMembersLbl: groupsArray[indexPath.row].numOfMembers)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let groupChatVC = storyboard?.instantiateViewController(identifier: "groupChatVC") as? GroupChatVC else { return }
+        let group =  groupsArray[indexPath.row]
+        
+        groupChatVC.initData(forGroup: group)
+        present(groupChatVC, animated: true, completion: nil)
+    }
+}

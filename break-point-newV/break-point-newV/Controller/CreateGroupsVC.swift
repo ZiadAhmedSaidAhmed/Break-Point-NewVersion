@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateGroupsVC: UIViewController {
 
@@ -31,7 +32,12 @@ class CreateGroupsVC: UIViewController {
         tableView.dataSource = self
         searchMemberTxtField.delegate = self
         searchMemberTxtField.addTarget(self, action: #selector(onEditingChanged), for: .editingChanged)
+        doneBtn.isHidden = true
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//    }
     
     @objc func onEditingChanged() {
         
@@ -47,7 +53,18 @@ class CreateGroupsVC: UIViewController {
     }
     
     @IBAction func doneBtnPressed(_ sender: Any) {
-        
+        if groupTitleTxtField.text != "" && groupDescreptionTxtField.text != "" {
+            DataService.instance.getUidsForEmails(emailsArray: selectedEmailsArray) { (uidsArray) in
+                
+                var users = uidsArray
+                users.append((Auth.auth().currentUser?.uid)!)
+                DataService.instance.createGroup(withTitle: self.groupTitleTxtField.text!, description: self.groupDescreptionTxtField.text!, users: users) { (groupCreatedSuccessfully) in
+                    if groupCreatedSuccessfully {
+                        self.dismiss(animated: true, completion: nil)
+                    } else { print("faild to create a group!") }
+                }
+            }
+        }
     }
     
     @IBAction func closeBtnPressed(_ sender: Any) {
@@ -65,7 +82,12 @@ extension CreateGroupsVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserCell else { return UITableViewCell() }
         
         let image = UIImage(named: "defaultProfileImage")
-        cell.setViews(profileImage: image!, email: emailArray[indexPath.row], isSelected: false)
+        
+        if selectedEmailsArray.contains(emailArray[indexPath.row]) {
+            cell.setViews(profileImage: image!, email: emailArray[indexPath.row], isSelected: true)
+        } else {
+            cell.setViews(profileImage: image!, email: emailArray[indexPath.row], isSelected: false)
+        }
         return cell
     }
     
@@ -74,12 +96,14 @@ extension CreateGroupsVC: UITableViewDelegate, UITableViewDataSource {
         if !selectedEmailsArray.contains(cell.emailLbl.text!) {
             selectedEmailsArray.append(cell.emailLbl.text!)
             groupMemberLbl.text = selectedEmailsArray.joined(separator: ", ")
+            doneBtn.isHidden = false
         } else {
             selectedEmailsArray = selectedEmailsArray.filter({ $0 != cell.emailLbl.text! })
             if selectedEmailsArray.count >= 1 {
                 groupMemberLbl.text = selectedEmailsArray.joined(separator: ", ")
             } else {
                 groupMemberLbl.text = "add people to your group"
+                doneBtn.isHidden = true
             }
         }
     }

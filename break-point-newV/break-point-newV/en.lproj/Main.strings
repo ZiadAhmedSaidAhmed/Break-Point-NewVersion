@@ -1,0 +1,105 @@
+
+/* Class = "UITextView"; text = "Say somthing here..."; ObjectID = "0Rc-2g-OTz"; */
+"0Rc-2g-OTz.text" = "Say somthing here...";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "1HR-ih-WxH"; */
+"1HR-ih-WxH.text" = "Title";
+
+/* Class = "UILabel"; text = "user@breakpoint.com"; ObjectID = "6f6-pR-6MC"; */
+"6f6-pR-6MC.text" = "user@breakpoint.com";
+
+/* Class = "UITextField"; placeholder = "enter an email..."; ObjectID = "6fr-An-Htm"; */
+"6fr-An-Htm.placeholder" = "enter an email...";
+
+/* Class = "UILabel"; text = "_newgroup"; ObjectID = "7zg-aW-yXC"; */
+"7zg-aW-yXC.text" = "_newgroup";
+
+/* Class = "UILabel"; text = "3 members"; ObjectID = "AUO-SN-g82"; */
+"AUO-SN-g82.text" = "3 members";
+
+/* Class = "UILabel"; text = "add people to your group"; ObjectID = "Aab-l0-DwZ"; */
+"Aab-l0-DwZ.text" = "add people to your group";
+
+/* Class = "UILabel"; text = "_feed"; ObjectID = "CIU-E3-WTo"; */
+"CIU-E3-WTo.text" = "_feed";
+
+/* Class = "UILabel"; text = "_login"; ObjectID = "DfZ-wB-mNm"; */
+"DfZ-wB-mNm.text" = "_login";
+
+/* Class = "UIButton"; normalTitle = "LOGIN WITH GMAIL"; ObjectID = "Eh7-xb-e0n"; */
+"Eh7-xb-e0n.normalTitle" = "LOGIN WITH GMAIL";
+
+/* Class = "UILabel"; text = "OR"; ObjectID = "Gmx-2V-U2c"; */
+"Gmx-2V-U2c.text" = "OR";
+
+/* Class = "UILabel"; text = "Group Descreption"; ObjectID = "HqN-65-EW0"; */
+"HqN-65-EW0.text" = "Group Descreption";
+
+/* Class = "UILabel"; text = "user@breakpoint.com"; ObjectID = "JtB-kT-op9"; */
+"JtB-kT-op9.text" = "user@breakpoint.com";
+
+/* Class = "UITextField"; placeholder = "give your group a description"; ObjectID = "Ktv-7o-bc2"; */
+"Ktv-7o-bc2.placeholder" = "give your group a description";
+
+/* Class = "UIButton"; normalTitle = "SIGN IN"; ObjectID = "LKh-6t-9xK"; */
+"LKh-6t-9xK.normalTitle" = "SIGN IN";
+
+/* Class = "UILabel"; text = "_postsomthing"; ObjectID = "TQk-r1-VmG"; */
+"TQk-r1-VmG.text" = "_postsomthing";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "Va0-dK-sfA"; */
+"Va0-dK-sfA.placeholder" = "email";
+
+/* Class = "UILabel"; text = "user@breakpoint.com"; ObjectID = "W8c-br-nd6"; */
+"W8c-br-nd6.text" = "user@breakpoint.com";
+
+/* Class = "UILabel"; text = "email sign in"; ObjectID = "XuF-iI-gbh"; */
+"XuF-iI-gbh.text" = "email sign in";
+
+/* Class = "UITabBarItem"; title = "Feed"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Feed";
+
+/* Class = "UITabBarItem"; title = "Groups"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Groups";
+
+/* Class = "UITabBarItem"; title = "me"; ObjectID = "dhR-pd-WdQ"; */
+"dhR-pd-WdQ.title" = "me";
+
+/* Class = "UILabel"; text = "_groups"; ObjectID = "egw-Rn-Xos"; */
+"egw-Rn-Xos.text" = "_groups";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ekr-e8-kJ5"; */
+"ekr-e8-kJ5.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "DONE"; ObjectID = "fYV-Ml-bjV"; */
+"fYV-Ml-bjV.normalTitle" = "DONE";
+
+/* Class = "UITextField"; placeholder = "give your group a title"; ObjectID = "gBc-RX-wEe"; */
+"gBc-RX-wEe.placeholder" = "give your group a title";
+
+/* Class = "UIButton"; normalTitle = "  by email"; ObjectID = "joz-pT-JAo"; */
+"joz-pT-JAo.normalTitle" = "  by email";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "juQ-a4-6Wc"; */
+"juQ-a4-6Wc.placeholder" = "password";
+
+/* Class = "UILabel"; text = "DESCREPTION"; ObjectID = "ktg-Uh-D4h"; */
+"ktg-Uh-D4h.text" = "DESCREPTION";
+
+/* Class = "UIButton"; normalTitle = " SEND"; ObjectID = "mc9-bT-pwZ"; */
+"mc9-bT-pwZ.normalTitle" = " SEND";
+
+/* Class = "UIButton"; normalTitle = "LOGIN WITH FACEBOOK"; ObjectID = "nwE-nI-s8U"; */
+"nwE-nI-s8U.normalTitle" = "LOGIN WITH FACEBOOK";
+
+/* Class = "UILabel"; text = "_breakpoint"; ObjectID = "vcW-Pc-no7"; */
+"vcW-Pc-no7.text" = "_breakpoint";
+
+/* Class = "UILabel"; text = "Group Title"; ObjectID = "xVi-n9-ypw"; */
+"xVi-n9-ypw.text" = "Group Title";
+
+/* Class = "UILabel"; text = "user@breakpoint.com"; ObjectID = "xXF-I5-KGP"; */
+"xXF-I5-KGP.text" = "user@breakpoint.com";
+
+/* Class = "UILabel"; text = "_me"; ObjectID = "ycR-qf-ZTf"; */
+"ycR-qf-ZTf.text" = "_me";

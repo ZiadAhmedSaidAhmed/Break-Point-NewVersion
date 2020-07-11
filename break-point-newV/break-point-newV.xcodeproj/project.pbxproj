@@ -26,8 +26,12 @@
 		0467F85224AE37A100ADE9AE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F85124AE37A100ADE9AE /* LoginVC.swift */; };
 		0467F85424AE3E0D00ADE9AE /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F85324AE3E0D00ADE9AE /* ShadowView.swift */; };
 		0467F85624AE51E900ADE9AE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F85524AE51E900ADE9AE /* AuthService.swift */; };
+		047471EA24B9E56F00E01FF6 /* GroupChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047471E924B9E56F00E01FF6 /* GroupChatCell.swift */; };
+		047471EC24B9E59E00E01FF6 /* GroupChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047471EB24B9E59E00E01FF6 /* GroupChatVC.swift */; };
 		0478A42724B47F0C001D1073 /* CreateGroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478A42624B47F0C001D1073 /* CreateGroupsVC.swift */; };
 		0478A42924B4C963001D1073 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478A42824B4C963001D1073 /* UserCell.swift */; };
+		047BC9DD24B88DAF00037633 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BC9DC24B88DAF00037633 /* GroupCell.swift */; };
+		047BC9DF24B8A25D00037633 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BC9DE24B8A25D00037633 /* Group.swift */; };
 		048EF8FA02F88EF3D65E27F2 /* Pods_break_point_newV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DD7444AB76EE7372F8689D /* Pods_break_point_newV.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +57,13 @@
 		0467F85124AE37A100ADE9AE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0467F85324AE3E0D00ADE9AE /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		0467F85524AE51E900ADE9AE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		047471E924B9E56F00E01FF6 /* GroupChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatCell.swift; sourceTree = "<group>"; };
+		047471EB24B9E59E00E01FF6 /* GroupChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatVC.swift; sourceTree = "<group>"; };
 		0478A42624B47F0C001D1073 /* CreateGroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupsVC.swift; sourceTree = "<group>"; };
 		0478A42824B4C963001D1073 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		047BC9DC24B88DAF00037633 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		047BC9DE24B8A25D00037633 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		047BC9E124B8EC0900037633 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		60DD7444AB76EE7372F8689D /* Pods_break_point_newV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_break_point_newV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73C3C03C5AF8D0E65239678 /* Pods-break-point-newV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-break-point-newV.release.xcconfig"; path = "Pods/Target Support Files/Pods-break-point-newV/Pods-break-point-newV.release.xcconfig"; sourceTree = "<group>"; };
 		A7E997F3DA6F95A557557328 /* Pods-break-point-newV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-break-point-newV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-break-point-newV/Pods-break-point-newV.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +128,7 @@
 				0467217724AF6254007C40CC /* meVC.swift */,
 				0467217924AF82EB007C40CC /* CreatePostVC.swift */,
 				0478A42624B47F0C001D1073 /* CreateGroupsVC.swift */,
+				047471EB24B9E59E00E01FF6 /* GroupChatVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -130,6 +140,8 @@
 				0467F85324AE3E0D00ADE9AE /* ShadowView.swift */,
 				0467217D24AFDA28007C40CC /* FeedCell.swift */,
 				0478A42824B4C963001D1073 /* UserCell.swift */,
+				047BC9DC24B88DAF00037633 /* GroupCell.swift */,
+				047471E924B9E56F00E01FF6 /* GroupChatCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				04631AC024B20E0000BDEC81 /* Message.swift */,
+				047BC9DE24B8A25D00037633 /* Group.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,13 +312,16 @@
 			files = (
 				0467217C24AFA4D4007C40CC /* UIViewExt.swift in Sources */,
 				0467F85424AE3E0D00ADE9AE /* ShadowView.swift in Sources */,
+				047471EC24B9E59E00E01FF6 /* GroupChatVC.swift in Sources */,
 				0467F83524ADF74500ADE9AE /* GroupsVC.swift in Sources */,
 				0467F83324ADF74500ADE9AE /* FeedVC.swift in Sources */,
 				0467F85224AE37A100ADE9AE /* LoginVC.swift in Sources */,
 				0467F84E24AE375D00ADE9AE /* customTextField.swift in Sources */,
 				0467F82F24ADF74500ADE9AE /* AppDelegate.swift in Sources */,
+				047471EA24B9E56F00E01FF6 /* GroupChatCell.swift in Sources */,
 				0467217E24AFDA28007C40CC /* FeedCell.swift in Sources */,
 				0467217824AF6254007C40CC /* meVC.swift in Sources */,
+				047BC9DD24B88DAF00037633 /* GroupCell.swift in Sources */,
 				0467F85024AE378D00ADE9AE /* AuthVC.swift in Sources */,
 				04631AC124B20E0000BDEC81 /* Message.swift in Sources */,
 				0467217A24AF82EB007C40CC /* CreatePostVC.swift in Sources */,
@@ -313,6 +329,7 @@
 				0467F85624AE51E900ADE9AE /* AuthService.swift in Sources */,
 				0478A42924B4C963001D1073 /* UserCell.swift in Sources */,
 				0467F83124ADF74500ADE9AE /* SceneDelegate.swift in Sources */,
+				047BC9DF24B8A25D00037633 /* Group.swift in Sources */,
 				0467F84C24AE1F0A00ADE9AE /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +341,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0467F83724ADF74500ADE9AE /* Base */,
+				047BC9E124B8EC0900037633 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
