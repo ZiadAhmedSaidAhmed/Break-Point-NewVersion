@@ -17,8 +17,8 @@ class GroupChatVC: UIViewController {
     @IBOutlet weak var messageTxtField: customTextField!
     @IBOutlet weak var txtAndBtnContainerView: UIView!
     
-    var group: Group?
     var messagesArray = [Message]()
+    var group: Group?
     
     func initData(forGroup group: Group) {
         self.group = group
@@ -38,12 +38,19 @@ class GroupChatVC: UIViewController {
         DataService.instance.REF_GROUPS.observe(.value) { (DataSnapshot) in
             DataService.instance.getChatForGroup(group: self.group!) { (returnedMessagesArray) in
                 self.messagesArray = returnedMessagesArray
+                self.tableView.reloadData()
+                
+                if self.messagesArray.count > 0 {
+                    self.tableView.scrollToRow(at: IndexPath(row: self.messagesArray.count - 1, section: 0), at: .none, animated: true)
+                }
             }
         }
     }
+
+    
     
     @IBAction func closeBtn(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        backFromShowDetail()
     }
     
     @IBAction func sendBtnPressed(_ sender: Any) {
@@ -52,6 +59,9 @@ class GroupChatVC: UIViewController {
             sendBtn.isEnabled = false
             messageTxtField.isEnabled = false
             DataService.instance.uploadPost(withMessage: messageTxtField.text!, forUid: Auth.auth().currentUser!.uid, withGroupKey: group?.groupKey) { (Complete) in
+                if self.messagesArray.count > 0 {
+                    self.tableView.scrollToRow(at: IndexPath(row: self.messagesArray.count - 1, section: 0), at: .none, animated: true)
+                }
                 self.messageTxtField.text = ""
                 self.sendBtn.isEnabled = true
                 self.messageTxtField.isEnabled = true
@@ -59,7 +69,7 @@ class GroupChatVC: UIViewController {
         }
     }
 }
-
+//MARK:------------------ TableView Setup ------------------
 extension GroupChatVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

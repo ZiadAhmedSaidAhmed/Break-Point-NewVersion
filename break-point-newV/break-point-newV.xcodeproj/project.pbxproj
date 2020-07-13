@@ -26,6 +26,9 @@
 		0467F85224AE37A100ADE9AE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F85124AE37A100ADE9AE /* LoginVC.swift */; };
 		0467F85424AE3E0D00ADE9AE /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F85324AE3E0D00ADE9AE /* ShadowView.swift */; };
 		0467F85624AE51E900ADE9AE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467F85524AE51E900ADE9AE /* AuthService.swift */; };
+		046CE5AB24BB867A0047EBB6 /* viewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CE5AA24BB867A0047EBB6 /* viewControllerExt.swift */; };
+		046CE5AD24BB95920047EBB6 /* GroupMembersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CE5AC24BB95920047EBB6 /* GroupMembersCell.swift */; };
+		046CE5AF24BB95BD0047EBB6 /* GroupMembersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CE5AE24BB95BD0047EBB6 /* GroupMembersVC.swift */; };
 		047471EA24B9E56F00E01FF6 /* GroupChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047471E924B9E56F00E01FF6 /* GroupChatCell.swift */; };
 		047471EC24B9E59E00E01FF6 /* GroupChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047471EB24B9E59E00E01FF6 /* GroupChatVC.swift */; };
 		0478A42724B47F0C001D1073 /* CreateGroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478A42624B47F0C001D1073 /* CreateGroupsVC.swift */; };
@@ -57,6 +60,9 @@
 		0467F85124AE37A100ADE9AE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0467F85324AE3E0D00ADE9AE /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		0467F85524AE51E900ADE9AE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		046CE5AA24BB867A0047EBB6 /* viewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewControllerExt.swift; sourceTree = "<group>"; };
+		046CE5AC24BB95920047EBB6 /* GroupMembersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMembersCell.swift; sourceTree = "<group>"; };
+		046CE5AE24BB95BD0047EBB6 /* GroupMembersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMembersVC.swift; sourceTree = "<group>"; };
 		047471E924B9E56F00E01FF6 /* GroupChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatCell.swift; sourceTree = "<group>"; };
 		047471EB24B9E59E00E01FF6 /* GroupChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatVC.swift; sourceTree = "<group>"; };
 		0478A42624B47F0C001D1073 /* CreateGroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupsVC.swift; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 				0467217924AF82EB007C40CC /* CreatePostVC.swift */,
 				0478A42624B47F0C001D1073 /* CreateGroupsVC.swift */,
 				047471EB24B9E59E00E01FF6 /* GroupChatVC.swift */,
+				046CE5AE24BB95BD0047EBB6 /* GroupMembersVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -142,6 +149,7 @@
 				0478A42824B4C963001D1073 /* UserCell.swift */,
 				047BC9DC24B88DAF00037633 /* GroupCell.swift */,
 				047471E924B9E56F00E01FF6 /* GroupChatCell.swift */,
+				046CE5AC24BB95920047EBB6 /* GroupMembersCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				0467217B24AFA4D4007C40CC /* UIViewExt.swift */,
+				046CE5AA24BB867A0047EBB6 /* viewControllerExt.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -318,6 +327,9 @@
 				0467F85224AE37A100ADE9AE /* LoginVC.swift in Sources */,
 				0467F84E24AE375D00ADE9AE /* customTextField.swift in Sources */,
 				0467F82F24ADF74500ADE9AE /* AppDelegate.swift in Sources */,
+				046CE5AF24BB95BD0047EBB6 /* GroupMembersVC.swift in Sources */,
+				046CE5AD24BB95920047EBB6 /* GroupMembersCell.swift in Sources */,
+				046CE5AB24BB867A0047EBB6 /* viewControllerExt.swift in Sources */,
 				047471EA24B9E56F00E01FF6 /* GroupChatCell.swift in Sources */,
 				0467217E24AFDA28007C40CC /* FeedCell.swift in Sources */,
 				0467217824AF6254007C40CC /* meVC.swift in Sources */,

@@ -12,6 +12,7 @@ class GroupsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var groupsArray = [Group]()
+    var emails = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,6 @@ extension GroupsVC: UITableViewDelegate, UITableViewDataSource {
         let group =  groupsArray[indexPath.row]
         
         groupChatVC.initData(forGroup: group)
-        present(groupChatVC, animated: true, completion: nil)
+        showDetail(groupChatVC)
     }
 }
