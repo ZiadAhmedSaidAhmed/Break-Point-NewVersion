@@ -31,7 +31,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 }
                 
                 AuthService.instance.registerUser(withEmail: self.emailTxtField.text!, andPassword: self.passwordTxtField.text!) { (success, error) in
-                    
                     if success {
                         AuthService.instance.loginUser(withEmail: self.emailTxtField.text!, andPassword: self.passwordTxtField.text!) { (success, error) in
                             self.dismiss(animated: true, completion: nil)

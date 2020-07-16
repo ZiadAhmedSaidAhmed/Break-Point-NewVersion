@@ -22,7 +22,7 @@ class GroupsVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        DataService.instance.REF_GROUPS.observe(.value) { (DataSnapshot) in
+        DataService.instance.REF_GROUPS.observe(.value) { (dataSnapshot) in
             DataService.instance.getGroupsForCurrentUser(handler: { (returnedArray) in
                 self.groupsArray = returnedArray.reversed()
                 self.tableView.reloadData()

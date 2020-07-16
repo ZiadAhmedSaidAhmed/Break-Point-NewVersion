@@ -17,7 +17,7 @@ class customTextField: UITextField {
         self.attributedPlaceholder = placeholder
         super.awakeFromNib()
     }
-    
+     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
